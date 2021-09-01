@@ -2,7 +2,7 @@ import { Headset, Mic, Settings } from '@material-ui/icons'
 import React from 'react'
 import { UserSidebar, UserSidebarControls, UserSidebarControlsWrapper } from './barUserStyles'
 
-function BarUser() {
+function BarUser () {
     return (
         <UserSidebar>
             <UserSidebarControlsWrapper>

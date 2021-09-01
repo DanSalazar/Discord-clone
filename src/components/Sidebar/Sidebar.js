@@ -3,7 +3,8 @@ import BarUser from './BarUser'
 import { 
     SidebarWrapper, 
     SidebarSearchBar, 
-    SidebarOptions, 
+    SidebarOptions,
+    SidebarHeader, 
     SidebarOptionsButtons 
 } from './sidebarStyles'
 
@@ -11,7 +12,9 @@ import {
 function Sidebar () {
     return (
         <SidebarWrapper>
-            <SidebarSearchBar placeholder="Search or initiate a conversation"/>
+            <SidebarHeader>
+                <SidebarSearchBar placeholder="Search or initiate a conversation"/>
+            </SidebarHeader>
             {/* <SidebarOptions>
                 <SidebarOptionsButtons>
                     Friends

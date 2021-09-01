@@ -6,11 +6,14 @@ export const SidebarWrapper = styled.div`
     width: 300px;
 `
 
+export const SidebarHeader = styled.div`
+    height: 60px;
+    width: 100%;
+`
+
 export const SidebarSearchBar = styled.input`
     background: var(--background-color);
     color: var(--text-secondary);
-    display: block;
-    margin:  10px auto;
     border: 0;
     width: 90%;
     padding: 6px;
