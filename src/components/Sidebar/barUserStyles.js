@@ -13,13 +13,11 @@ export const UserSidebar = styled.div`
 `
 
 export const UserSidebarControlsWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 `
 
 export const UserSidebarControls = styled.button`
     color: var(--text-secondary);
+    display: inline-block;
     border: 0;
     background: 0;
     cursor: pointer;

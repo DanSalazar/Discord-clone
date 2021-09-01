@@ -2,11 +2,8 @@ import styled from 'styled-components'
 
 export const SidebarWrapper = styled.div`
     background: var(--background-secondary);
-    position: fixed;
-    left: 80px;
-    top: 0;
-    height: 100%;
-    width: 250px;
+    position: relative;
+    width: 300px;
 `
 
 export const SidebarSearchBar = styled.input`

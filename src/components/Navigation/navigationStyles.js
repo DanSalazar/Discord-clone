@@ -1,12 +1,9 @@
 import styled from 'styled-components'
 
 export const NavigationWrapper = styled.div`
-    background: transparent;
-    width: 80px;
-    position: fixed;
-    height: 100%;
-    left: 0;
-    top: 0;
+    background: var(--background-color);
+    padding: 0 8px;
+    width: 90px;
 `
 
 export const NavigationTree = styled.div`
@@ -21,8 +18,8 @@ export const NavigationChannel = styled.button`
     background: var(--background-secondary);
     color: var(--navigation-color-channel);
     border-radius: 50%;
-    width: 52px;
-    height: 52px;
+    width: 42px;
+    height: 42px;
     border: 0;
     outline: 0;
     transition: 0.2s;
@@ -33,6 +30,12 @@ export const NavigationChannel = styled.button`
         color: var(--text-primary);
         border-radius: 16px;
     }
+
+    @media screen and (min-width: 768px){
+        height: 52px;
+        width: 52px;
+    }
+
 `
 
 
