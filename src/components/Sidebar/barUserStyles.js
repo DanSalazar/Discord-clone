@@ -12,7 +12,39 @@ export const UserSidebar = styled.div`
     align-items: center;
 `
 
+export const UserSidebarStatus = styled.div`
+    display: flex;
+    align-items: center;
+    height: 100%;
+`
+
+export const UserSidebarInfo = styled.div`
+    display: inline-flex;
+    overflow: hidden;
+    flex-direction: column;
+    max-width: 80px;
+    margin: 0 5px;
+    align-items: flex-start;
+`
+
+export const UserSidebarUsername = styled.p`
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+`
+
+export const UserSidebarId = styled.span`
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 12px;
+`
+
 export const UserSidebarControlsWrapper = styled.div`
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `
 
 export const UserSidebarControls = styled.button`
@@ -21,11 +53,12 @@ export const UserSidebarControls = styled.button`
     border: 0;
     background: 0;
     cursor: pointer;
+    padding: 4px;
     border-radius: var(--b-radius);
     transition: var(--duration-transitions);
 
     svg {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     &:hover {

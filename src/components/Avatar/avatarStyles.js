@@ -1,27 +1,27 @@
 import styled from 'styled-components'
 
 export const AvatarWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    width:35px;
+    height: 35px;
     position: relative;
-    height: 45px;
 `
 
 export const AvatarImg = styled.img`
     border-radius: 50%;
-    object-fit: cover;
     width: 100%;
-    height: 40px;
+    height: auto;
 `
 
 export const AvatarStatusUser = styled.div`
-    background: var(--background-secondary);
-    width: 10px;
-    height: 10px;
+    background: var(--navigation-color-channel);
+    border: 4px solid var(--background-secondary-alt);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
     position: absolute;
-    right: 5px;
-    bottom: 5px;
+    right: 0px;
+    bottom: -4px;
     z-index: 10;
 `

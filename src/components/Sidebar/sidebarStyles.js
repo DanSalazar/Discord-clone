@@ -8,12 +8,16 @@ export const SidebarWrapper = styled.div`
 
 export const SidebarHeader = styled.div`
     height: 60px;
+    display: grid;
+    place-items: center;
     width: 100%;
 `
 
 export const SidebarSearchBar = styled.input`
     background: var(--background-color);
     color: var(--text-secondary);
+    display: block;
+    margin: auto;
     border: 0;
     width: 90%;
     padding: 6px;
