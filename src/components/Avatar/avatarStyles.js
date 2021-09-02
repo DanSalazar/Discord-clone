@@ -16,7 +16,9 @@ export const AvatarImg = styled.img`
 
 export const AvatarStatusUser = styled.div`
     background: var(--navigation-color-channel);
-    border: 4px solid var(--background-secondary-alt);
+    border: 4px solid ${props => props.colorBg === 'gray'
+    ? 'var(--background-secondary)'
+    : 'var(--background-secondary-alt)'};;
     border-radius: 50%;
     width: 18px;
     height: 18px;

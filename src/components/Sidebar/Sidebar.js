@@ -1,13 +1,21 @@
+import { Add, PeopleAlt } from '@material-ui/icons'
 import React from 'react'
+import PrivatesChannels from '../PrivateChannels/PrivatesChannels'
 import BarUser from './BarUser'
 import { 
     SidebarWrapper, 
-    SidebarSearchBar, 
-    SidebarOptions,
-    SidebarHeader, 
-    SidebarOptionsButtons 
+    SidebarSearchBar,
+    SidebarHeader,
+    SidebarContent,
+    SidebarChannels, 
+    SidebarChannelsWrapper,
+    SidebarChannelsButton,
+    SidebarPrivateChannelsTitle,
+    SidebarOptionButtons,
+    SidebarOptionButtonTitle
 } from './sidebarStyles'
 
+const helper = [1, 2, 3]
 
 function Sidebar () {
     return (
@@ -15,11 +23,34 @@ function Sidebar () {
             <SidebarHeader>
                 <SidebarSearchBar placeholder="Search or initiate a conversation"/>
             </SidebarHeader>
-            {/* <SidebarOptions>
-                <SidebarOptionsButtons>
-                    Friends
-                </SidebarOptionsButtons>
-            </SidebarOptions> */}
+
+            <SidebarContent>
+                <SidebarOptionButtons>
+                    <PeopleAlt/>
+                    <SidebarOptionButtonTitle>
+                        Friends
+                    </SidebarOptionButtonTitle>
+                </SidebarOptionButtons>
+
+                <SidebarChannelsWrapper>
+                        
+                    <SidebarChannelsButton>
+                        <SidebarPrivateChannelsTitle>
+                            DIRECT MESSAGE
+                        </SidebarPrivateChannelsTitle>
+                        <Add/>
+                    </SidebarChannelsButton>
+                        
+                    <SidebarChannels>
+                        {helper.map(item => (
+                            <PrivatesChannels />
+                        )) }
+                    </SidebarChannels>
+
+                </SidebarChannelsWrapper>
+                
+            </SidebarContent>
+            
             <BarUser/>
         </SidebarWrapper>
     )

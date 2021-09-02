@@ -10,12 +10,13 @@
     --text-primary: #fff;
     --text-primary-alt: #bbbbbb;
     --text-secondary: #72767d;
-    --text-secondary-hover: #a5a7ac;
-    --text-channels: #8e978f;
+    --text-secondary-hover: #c5c9d4;
+    --text-channels: #8b8b8b;
     --chat-input-background: #3c3f44;
     --navigation-color-channel: #38aa55;
     --b-radius: 5px;
     --duration-transitions: 0.25s ease-in-out;
+    --duration-transitions-tiny: 0.1s ease-in-out;
 }
 
 * {
