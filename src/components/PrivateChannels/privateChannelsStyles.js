@@ -31,6 +31,6 @@ export const PrivateChannelName = styled.p`
     color: var(--text-channels);
     display: inline-block;
     margin: 0 10px;
-    font-weight: 500;
-    font-size: 0.875em;
+    font-weight: 400;
+    font-size: 1em;
 `

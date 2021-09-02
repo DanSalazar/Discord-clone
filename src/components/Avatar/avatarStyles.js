@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const AvatarWrapper = styled.div`
     border-radius: 50%;
     display: inline-block;
-    width:35px;
-    height: 35px;
+    width: ${props => props.width ? props.width : '35px'};
+    height: ${props => props.height ? props.width : '35px'};
     position: relative;
 `
 

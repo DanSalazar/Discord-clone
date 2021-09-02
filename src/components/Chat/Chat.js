@@ -1,7 +1,8 @@
 import { Add, EmojiEmotions, Gif, Send } from '@material-ui/icons'
 import React from 'react'
+import ChatBox from './ChatBox'
 import ChatHeader from './ChatHeader'
-import { ChatBox, ChatInputBox, ChatInputControls, ChatInputControlsWrapper, ChatInputDragAndDrog, ChatInputMessage, ChatView } from './chatStyles'
+import { ChatInputBox, ChatInputControls, ChatInputControlsWrapper, ChatInputDragAndDrog, ChatInputMessage, ChatView } from './chatStyles'
 
 function Chat () {
     return (

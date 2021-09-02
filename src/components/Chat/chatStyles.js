@@ -49,7 +49,7 @@ export const ChatHeaderWrapper = styled.header`
 export const ChatHeaderLeftPart = styled.div`
 `
 
-export const ChatHeaderRightPart = styled.div`
+export const ChatHeaderToolbar = styled.div`
     display: flex;
 `
 
@@ -94,14 +94,10 @@ export const ChatHeaderInput = styled.input`
     }
 `
 
-export const ChatBox = styled.div`
-    height: 100%;
-`
-
 export const ChatInputBox = styled.div`
     background: var(--chat-input-background);
-    width: 95%;
     display: flex;
+    width: 95%;
     margin: auto;
     height: 55px;
     padding: 6px;

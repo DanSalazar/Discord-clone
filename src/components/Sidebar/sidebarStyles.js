@@ -7,7 +7,7 @@ export const SidebarWrapper = styled.div`
 `
 
 export const SidebarHeader = styled.div`
-    height: 60px;
+    height: 50px;
     display: grid;
     place-items: center;
     width: 100%;
@@ -25,7 +25,7 @@ export const SidebarSearchBar = styled.input`
 `
 
 export const SidebarContent = styled.div`
-    padding: 0.875em;
+    padding: 0 0.875em;
 `
 
 export const SidebarChannelsWrapper =  styled.div`

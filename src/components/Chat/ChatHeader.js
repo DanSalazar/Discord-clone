@@ -1,6 +1,6 @@
 import { Bookmark, Help, Inbox, PersonAdd, PhoneCallback, Search, Videocam } from '@material-ui/icons'
 import React from 'react'
-import { ChatHeaderWrapper, ChatHeaderInput, ChatHeaderInputBox, ChatHeaderInputIcon, ChatIcons, ChatHeaderIconsWrapper, ChatHeaderLeftPart, ChatHeaderRightPart } from './chatStyles'
+import { ChatHeaderWrapper, ChatHeaderInput, ChatHeaderInputBox, ChatHeaderInputIcon, ChatIcons, ChatHeaderIconsWrapper, ChatHeaderLeftPart, ChatHeaderToolbar } from './chatStyles'
 
 
 function ChatHeader ({ channelName, channelStatus }) {
@@ -9,7 +9,7 @@ function ChatHeader ({ channelName, channelStatus }) {
             
             <ChatHeaderLeftPart/>
 
-            <ChatHeaderRightPart>
+            <ChatHeaderToolbar>
                 <ChatHeaderIconsWrapper>
                     <ChatIcons>
                         <PhoneCallback/>
@@ -40,7 +40,7 @@ function ChatHeader ({ channelName, channelStatus }) {
                         <Help/>
                     </ChatIcons>
                 </ChatHeaderIconsWrapper>
-            </ChatHeaderRightPart>
+            </ChatHeaderToolbar>
 
         </ChatHeaderWrapper>
     )
