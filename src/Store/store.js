@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-export const UserContext = React.createContext({})
+export const UserAuth = React.createContext({})
 
 export default function UserProvider ({children}) {
-    const [isLogged, setLogged] = useState(localStorage.getItem('user') || false)
+    const [isLogin, setLogin] = useState(localStorage.getItem('token') || false)
     
-    return <UserContext.Provider value={isLogged}>
+    return <UserAuth.Provider value={{ isLogin, setLogin } }>
         {children}
-    </UserContext.Provider>
+    </UserAuth.Provider>
 }
 

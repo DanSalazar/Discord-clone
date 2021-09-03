@@ -82,6 +82,13 @@ export const InputForm = styled.input`
     }    
 `
 
+export const ErrorText = styled.p`
+    color: var(--error-color);
+    margin: 0;
+    font-size: 14px;
+    margin: 5px 0 0 0;
+`
+
 export const SpanInfo = styled.span`
     color: var(--text-secondary);
     font-size: 14px;

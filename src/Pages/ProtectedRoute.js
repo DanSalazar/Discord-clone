@@ -1,15 +1,13 @@
 import React from 'react'
 import { useContext } from 'react'
 import { Redirect, Route } from 'react-router-dom'
-import { UserContext } from '../Store/store'
+import { UserAuth } from '../Store/store'
 
 function ProtectedRoute ({ component, ...rest }) {
-    const userLogged = useContext(UserContext)
+    const { isLogin } = useContext(UserAuth)
 
-    if(userLogged) return (
-        <Route component={component} {...rest} />
-    )
-
+    if(isLogin) return <Route component={component} {...rest} />
+    
     return <Redirect to='/login' />
 }
 
