@@ -1,16 +1,18 @@
 import React from 'react'
-import Chat from './components/Chat/Chat'
-import Navigation from './components/Navigation/Navigation'
-import Sidebar from './components/Sidebar/Sidebar'
-import { AppLayout } from './styles'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './Pages/Home/Home'
+import Login from './Pages/Login/Login'
+import Register from './Pages/Register/Register'
 
 function App () {
   return (
-      <AppLayout>
-        <Navigation/>
-        <Sidebar/>
-        <Chat/>
-      </AppLayout>
+      <Router>
+        <Switch>
+          <Route path='/home' component={Home} />
+          <Route path='/login' component={Login}/>
+          <Route path='/register' component={Register}/>
+        </Switch>
+      </Router>
   );
 }
 

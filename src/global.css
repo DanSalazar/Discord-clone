@@ -15,6 +15,8 @@
     --text-channels: #8b8b8b;
     --chat-input-background: #3c3f44;
     --navigation-color-channel: #38aa55;
+    --primary-color: #5865F2;
+    --primary-color-hover: #404EED;
     --b-radius: 5px;
     --duration-transitions: 0.25s ease-in-out;
     --duration-transitions-tiny: 0.1s ease-in-out;
@@ -32,6 +34,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-input, button {
+input, button, textarea {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: var(--b-radius);
 }
