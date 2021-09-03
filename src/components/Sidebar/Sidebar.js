@@ -43,7 +43,7 @@ function Sidebar () {
                         
                     <SidebarChannels>
                         {helper.map(item => (
-                            <PrivatesChannels />
+                            <PrivatesChannels key={item} />
                         )) }
                     </SidebarChannels>
 

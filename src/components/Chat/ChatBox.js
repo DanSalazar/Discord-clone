@@ -1,6 +1,5 @@
 import React from 'react'
 import { ChatBoxMessagesContent, ChatBoxWrapper } from './chatBoxStyles'
-import Avatar from '../Avatar/Avatar'
 import ChatMessage from './ChatMessage'
 
 function ChatBox () {
