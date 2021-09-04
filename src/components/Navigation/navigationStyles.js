@@ -28,12 +28,12 @@ export const NavigationChannel = styled.button`
     &:hover {
         background: var(--navigation-color-channel);
         color: var(--text-primary);
-        border-radius: 16px;
+        border-radius: 20px;
     }
 
     @media screen and (min-width: 768px){
-        height: 52px;
-        width: 52px;
+        height: 54px;
+        width: 54px;
     }
 
 `

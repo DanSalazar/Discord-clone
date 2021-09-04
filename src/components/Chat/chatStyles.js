@@ -2,8 +2,6 @@ import styled from 'styled-components'
 
 export const ChatView = styled.div`
     width: 100%;
-    height: 100%;
-    position: relative;
     padding: 0 0 1em 0;
     background: var(--background-tertiary);
     display: none;
@@ -15,7 +13,7 @@ export const ChatView = styled.div`
 
 `
 
-export const ChatIcons = styled.button`
+export const ChatButtons = styled.button`
     border: 0;
     background: none;
     color: var(--text-primary-alt);
@@ -44,16 +42,21 @@ export const ChatHeaderWrapper = styled.header`
     width: 100%;
     height: 60px;
     background: var(--background-primary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 `
 
-export const ChatHeaderLeftPart = styled.div`
+export const ChatHeaderChannelName = styled.p`
+    font-size: 1em;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin: 0 5px;
 `
 
 export const ChatHeaderToolbar = styled.div`
     display: flex;
 `
 
-export const ChatHeaderIconsWrapper = styled.div`
+export const ChatHeaderButtonsWrapper = styled.div`
 `
 
 export const ChatHeaderInputBox = styled.div`

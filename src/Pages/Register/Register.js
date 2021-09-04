@@ -37,9 +37,9 @@ function Register () {
                     <LabelForm> Username </LabelForm>
                     <InputForm {...usernameField} />
                     <LabelForm> Password </LabelForm>
-                    <InputForm type='password' {...passwordField} />
+                    <InputForm {...passwordField} />
                     <LabelForm> Confirm Password </LabelForm>
-                    <InputForm type='password' {...confirmPasswordField} />
+                    <InputForm {...confirmPasswordField} />
                    
                     {errors && <ErrorText> {errors.message} </ErrorText>}
                     

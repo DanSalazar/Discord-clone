@@ -8,9 +8,7 @@ function Chat () {
     return (
         <ChatView>
             <ChatHeader/>
-
             <ChatBox/>
-
             <ChatInputBox>
                 <ChatInputDragAndDrog>
                     <Add/>

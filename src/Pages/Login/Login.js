@@ -34,7 +34,7 @@ function Login () {
                     <LabelForm> Username </LabelForm>
                     <InputForm {...usernameField} />
                     <LabelForm> Password </LabelForm>
-                    <InputForm {...passwordField}/>
+                    <InputForm {...passwordField} />
 
                     {errors && <ErrorText> {errors.message} </ErrorText>}
 

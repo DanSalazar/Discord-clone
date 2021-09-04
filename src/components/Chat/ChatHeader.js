@@ -1,29 +1,31 @@
 import { Bookmark, Help, Inbox, PersonAdd, PhoneCallback, Search, Videocam } from '@material-ui/icons'
 import React from 'react'
-import { ChatHeaderWrapper, ChatHeaderInput, ChatHeaderInputBox, ChatHeaderInputIcon, ChatIcons, ChatHeaderIconsWrapper, ChatHeaderLeftPart, ChatHeaderToolbar } from './chatStyles'
+import { ChatHeaderWrapper, ChatHeaderInput, ChatHeaderInputBox, ChatHeaderInputIcon, ChatButtons, ChatHeaderButtonsWrapper, ChatHeaderChannelName, ChatHeaderToolbar } from './chatStyles'
 
 
-function ChatHeader ({ channelName, channelStatus }) {
+function ChatHeader ({ channelName }) {
     return (
         <ChatHeaderWrapper>
             
-            <ChatHeaderLeftPart/>
+            <ChatHeaderChannelName>
+                User
+            </ChatHeaderChannelName>
 
             <ChatHeaderToolbar>
-                <ChatHeaderIconsWrapper>
-                    <ChatIcons>
+                <ChatHeaderButtonsWrapper>
+                    <ChatButtons>
                         <PhoneCallback/>
-                    </ChatIcons>
-                    <ChatIcons>
+                    </ChatButtons>
+                    <ChatButtons>
                         <Videocam/>
-                    </ChatIcons>
-                    <ChatIcons>
+                    </ChatButtons>
+                    <ChatButtons>
                         <Bookmark/>
-                    </ChatIcons>
-                    <ChatIcons>
+                    </ChatButtons>
+                    <ChatButtons>
                         <PersonAdd/>
-                    </ChatIcons>
-                </ChatHeaderIconsWrapper>
+                    </ChatButtons>
+                </ChatHeaderButtonsWrapper>
 
                 <ChatHeaderInputBox>
                     <ChatHeaderInput placeholder="Search"/>
@@ -32,14 +34,14 @@ function ChatHeader ({ channelName, channelStatus }) {
                     </ChatHeaderInputIcon>
                 </ChatHeaderInputBox>
 
-                <ChatHeaderIconsWrapper>
-                    <ChatIcons>
+                <ChatHeaderButtonsWrapper>
+                    <ChatButtons>
                         <Inbox/>
-                    </ChatIcons>
-                    <ChatIcons>
+                    </ChatButtons>
+                    <ChatButtons>
                         <Help/>
-                    </ChatIcons>
-                </ChatHeaderIconsWrapper>
+                    </ChatButtons>
+                </ChatHeaderButtonsWrapper>
             </ChatHeaderToolbar>
 
         </ChatHeaderWrapper>

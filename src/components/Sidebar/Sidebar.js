@@ -1,6 +1,5 @@
 import { Add, PeopleAlt } from '@material-ui/icons'
 import React from 'react'
-import PrivatesChannels from '../PrivateChannels/PrivatesChannels'
 import BarUser from './BarUser'
 import { 
     SidebarWrapper, 
@@ -14,8 +13,6 @@ import {
     SidebarOptionButtons,
     SidebarOptionButtonTitle
 } from './sidebarStyles'
-
-const helper = [1, 2, 3]
 
 function Sidebar () {
     return (
@@ -42,9 +39,6 @@ function Sidebar () {
                     </SidebarChannelsButton>
                         
                     <SidebarChannels>
-                        {helper.map(item => (
-                            <PrivatesChannels key={item} />
-                        )) }
                     </SidebarChannels>
 
                 </SidebarChannelsWrapper>

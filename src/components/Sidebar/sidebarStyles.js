@@ -4,13 +4,15 @@ export const SidebarWrapper = styled.div`
     background: var(--background-secondary);
     position: relative;
     width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 `
 
-export const SidebarHeader = styled.div`
-    height: 50px;
+export const SidebarHeader = styled.header`
+    height: 60px;
     display: grid;
     place-items: center;
-    width: 100%;
 `
 
 export const SidebarSearchBar = styled.input`
@@ -19,8 +21,8 @@ export const SidebarSearchBar = styled.input`
     display: block;
     margin: auto;
     border: 0;
-    width: 90%;
     padding: 6px;
+    width: 90%;
     border-radius: var(--b-radius);
 `
 
@@ -44,7 +46,6 @@ export const SidebarChannelsButton = styled.button`
     width: 100%;
 
     &:hover > p {
-        transition: var(--duration-transitions-tiny);
         color: var(--text-primary);
     }
 

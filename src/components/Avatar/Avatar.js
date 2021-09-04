@@ -1,14 +1,11 @@
 import React from 'react'
 import { AvatarImg, AvatarWrapper } from './avatarStyles'
 
-const URL_IMAGE = 'https://cdn.discordapp.com/avatars/663749915599568946/bbaa8746fcc5d66a82b7165c97d11f92.png?size=512'
+const URL_IMAGE = 'https://cdn.discordapp.com/avatars/846973614439137320/f9eb0a211cb40cdec09ae1384a1a6ace.png?size=256'
 
-function Avatar ({width, height, colorBg, children}) {
+function Avatar ({ width, height }) {
     return (
-        <AvatarWrapper width={width} height={height}>
-            {/* <AvatarStatusUser colorBg={colorBg} /> */}
-            <AvatarImg src={URL_IMAGE} />
-        </AvatarWrapper>
+        <AvatarImg src={URL_IMAGE} width={width} height={height} />
     )
 }
 
