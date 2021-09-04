@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChatMessageWrapper, ChatChannelTimestamp, ChatChannelName, ChatChannelMessage, ChannelMessageContent } from './chatBoxStyles'
+import { ChatMessageWrapper, ChatChannelTimestamp, ChatChannelName, ChatChannelMessage, ChannelMessageContent, ChatChannelNameAndTimeWrapper } from './chatBoxStyles'
 import Avatar from '../Avatar/Avatar'
 
 function ChatMessage ({ channelName, messageContent }) {
@@ -7,14 +7,14 @@ function ChatMessage ({ channelName, messageContent }) {
         <ChatMessageWrapper>
             <Avatar width="40px" height="40px"/>
             <ChannelMessageContent>
-                <ChatChannelName>
-                    { channelName }
-                </ChatChannelName>
-                <ChatChannelTimestamp>
-                    <span>
-                        Time
-                    </span>
-                </ChatChannelTimestamp>
+                <ChatChannelNameAndTimeWrapper> 
+                    <ChatChannelName>
+                        { channelName }
+                    </ChatChannelName>
+                    <ChatChannelTimestamp>
+                        <span> {new Date(Date.now()).toLocaleDateString()} </span>
+                    </ChatChannelTimestamp>    
+                </ChatChannelNameAndTimeWrapper>
                 <ChatChannelMessage>
                     { messageContent }
                 </ChatChannelMessage>

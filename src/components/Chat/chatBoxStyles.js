@@ -12,12 +12,17 @@ export const ChatBoxMessagesContent = styled.div`
 export const ChatMessageWrapper = styled.div`
     display: flex;
     width: 95%;
-    margin: 18px auto;
-    align-items: center;
+    height: auto;
+    padding: 4px;
+    margin: 20px auto;
 `
 
 export const ChannelMessageContent = styled.div`
     margin: 0 10px;
+`
+
+export const ChatChannelNameAndTimeWrapper = styled.div`
+
 `
 
 export const ChatChannelName = styled.p`
@@ -35,8 +40,8 @@ export const ChatChannelTimestamp = styled.time`
 `
 
 export const ChatChannelMessage = styled.div`
-    color: var(--text-primary-alt);
+    color: var(--text-message);
     margin: 0;
-    font-weight: 300;
+    word-break: break-all;
     font-size: 16px;
 `
