@@ -1,7 +1,9 @@
 import React, { useContext, useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { AppLayoutLoggedOut, ButtonForm, FormLogin, InputForm, LabelForm, LinkStyled, LoginBox, ErrorText, SpanInfo } from './styles'
+import { Input, Label, LinkStyled, ErrorText, SpanInfo } from '../../components/GlobalComponents/styles'
+import { AppLayoutLoggedOut, FormLogin, LoginBox } from './styles'
 import useField from '../../hooks/useField'
+import Button from '../../components/Button/Button'
 import { UserAuth } from '../../Store/store'
 
 function Login () {
@@ -31,16 +33,16 @@ function Login () {
         <AppLayoutLoggedOut> 
             <LoginBox>
                 <FormLogin onSubmit={handleSubmit}>
-                    <LabelForm> Username </LabelForm>
-                    <InputForm {...usernameField} />
-                    <LabelForm> Password </LabelForm>
-                    <InputForm {...passwordField} />
+                    <Label> Username </Label>
+                    <Input {...usernameField} />
+                    <Label> Password </Label>
+                    <Input {...passwordField} />
 
                     {errors && <ErrorText> {errors.message} </ErrorText>}
 
-                    <ButtonForm> Login </ButtonForm>
+                    <Button color='primary' size='all'> Login </Button>
                     <SpanInfo> 
-                        ¿You need an account? <LinkStyled to="/register">  Register </LinkStyled> 
+                        ¿You need an account? <LinkStyled to='/register'>  Register </LinkStyled> 
                     </SpanInfo>
                 </FormLogin>
             </LoginBox>

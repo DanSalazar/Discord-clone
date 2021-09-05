@@ -4,14 +4,16 @@ import Home from './Pages/Home/Home'
 import Login from './Pages/Login/Login'
 import ProtectedRoute from './Pages/ProtectedRoute'
 import Register from './Pages/Register/Register'
-import UserProvider from './Store/store'
+import { UserProvider, UserDataProvider } from './Store/store'
 
 function App () {
   return (
       <Router>
         <Switch>
           <UserProvider>
-            <ProtectedRoute path='/home' component={Home} />
+            <UserDataProvider>
+              <ProtectedRoute path='/home' component={Home} />
+            </UserDataProvider>
             <Route path='/login' component={Login}/>
             <Route path='/register' component={Register}/>
           </UserProvider>

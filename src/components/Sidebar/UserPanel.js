@@ -1,24 +1,25 @@
 import { Headset, Mic, Settings } from '@material-ui/icons'
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserState } from '../../Store/store'
 import Avatar from '../Avatar/Avatar'
-import { UserSidebar, UserSidebarControls, UserSidebarControlsWrapper, UserSidebarId, UserSidebarInfo, UserSidebarStatus, UserSidebarUsername } from './barUserStyles'
+import { UserSidebar, UserSidebarControls, UserSidebarControlsWrapper, UserSidebarId, UserSidebarInfo, UserSidebarStatus, UserSidebarUsername } from './userPanelStyles'
 
-const USERNAME = 'Usertest 🐢'
+function UserPanel () {
+    const { username, tag } = useContext(UserState)
 
-function BarUser () {
     return (
         <UserSidebar>
             <UserSidebarStatus>
                 <Avatar/>
                 <UserSidebarInfo>
                     <UserSidebarUsername>
-                        {USERNAME.length > 12 
-                        ? USERNAME.slice(0, 12) + '...'
-                        : USERNAME
+                        {username.length > 12 
+                        ? username.slice(0, 12) + '...'
+                        : username
                         }
                     </UserSidebarUsername>
                     <UserSidebarId>
-                        #0001
+                        {tag}
                     </UserSidebarId>
                 </UserSidebarInfo>
             </UserSidebarStatus>
@@ -38,4 +39,4 @@ function BarUser () {
     )
 }
 
-export default BarUser
+export default UserPanel

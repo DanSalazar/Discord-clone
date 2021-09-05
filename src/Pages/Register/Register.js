@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import useField from '../../hooks/useField'
+import Button from '../../components/Button/Button'
 import { RegisterBox, FormRegister } from './styles'
-import { AppLayoutLoggedOut, ButtonForm, ErrorText, InputForm, LabelForm, LinkStyled, SpanInfo } from '../Login/styles'
+import { Input, Label, LinkStyled, ErrorText, SpanInfo } from '../../components/GlobalComponents/styles'
+import { AppLayoutLoggedOut } from '../Login/styles'
 
 function Register () {
     const usernameField = useField({ type: 'text', name: 'username' })
@@ -34,16 +36,16 @@ function Register () {
         <AppLayoutLoggedOut>
             <RegisterBox>
                 <FormRegister onSubmit={handleSubmit}> 
-                    <LabelForm> Username </LabelForm>
-                    <InputForm {...usernameField} />
-                    <LabelForm> Password </LabelForm>
-                    <InputForm {...passwordField} />
-                    <LabelForm> Confirm Password </LabelForm>
-                    <InputForm {...confirmPasswordField} />
+                    <Label> Username </Label>
+                    <Input {...usernameField} />
+                    <Label> Password </Label>
+                    <Input {...passwordField} />
+                    <Label> Confirm Password </Label>
+                    <Input {...confirmPasswordField} />
                    
                     {errors && <ErrorText> {errors.message} </ErrorText>}
                     
-                    <ButtonForm> Register </ButtonForm>
+                    <Button color='primary' size='all'> Register </Button>
                     <SpanInfo> 
                         ¿You have an account? <LinkStyled to='/login'> Login </LinkStyled> 
                     </SpanInfo>

@@ -1,6 +1,6 @@
 import { Add, PeopleAlt } from '@material-ui/icons'
 import React from 'react'
-import BarUser from './BarUser'
+import UserPanel from './UserPanel'
 import { 
     SidebarWrapper, 
     SidebarSearchBar,
@@ -45,7 +45,7 @@ function Sidebar () {
                 
             </SidebarContent>
             
-            <BarUser/>
+            <UserPanel/>
         </SidebarWrapper>
     )
 }
