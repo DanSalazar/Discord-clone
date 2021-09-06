@@ -14,7 +14,7 @@ import {
     SidebarOptionButtonTitle
 } from './sidebarStyles'
 
-function Sidebar () {
+function Sidebar ({ handleOptionView }) {
     return (
         <SidebarWrapper>
             <SidebarHeader>
@@ -45,7 +45,7 @@ function Sidebar () {
                 
             </SidebarContent>
             
-            <UserPanel/>
+            <UserPanel handleOptionView={handleOptionView} />
         </SidebarWrapper>
     )
 }

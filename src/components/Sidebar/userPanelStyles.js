@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const UserSidebar = styled.div`
+export const UserSidebar = styled.section`
     background: var(--background-secondary-alt);
     width: 100%;
     padding: 0.5em;
@@ -30,14 +30,14 @@ export const UserSidebarInfo = styled.div`
 export const UserSidebarUsername = styled.p`
     color: var(--text-primary);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875em;
     margin: 0;
 `
 
 export const UserSidebarId = styled.span`
     color: var(--text-secondary);
     margin: 0;
-    font-size: 12px;
+    font-size: 0.75em;
 `
 
 export const UserSidebarControlsWrapper = styled.div`

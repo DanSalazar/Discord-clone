@@ -4,7 +4,7 @@ import { UserState } from '../../Store/store'
 import Avatar from '../Avatar/Avatar'
 import { UserSidebar, UserSidebarControls, UserSidebarControlsWrapper, UserSidebarId, UserSidebarInfo, UserSidebarStatus, UserSidebarUsername } from './userPanelStyles'
 
-function UserPanel () {
+function UserPanel ({ handleOptionView }) {
     const { username, tag } = useContext(UserState)
 
     return (
@@ -31,7 +31,7 @@ function UserPanel () {
                 <UserSidebarControls>
                     <Headset/>
                 </UserSidebarControls>
-                <UserSidebarControls>
+                <UserSidebarControls onClick={handleOptionView}>
                     <Settings/>
                 </UserSidebarControls>
             </UserSidebarControlsWrapper>

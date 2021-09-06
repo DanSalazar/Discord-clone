@@ -1,10 +1,10 @@
 import React from 'react'
 import { ButtonStyled } from './buttonStyles'
 
-function Button ({ children, color, size }) {
+function Button (props) {
     return (
-        <ButtonStyled color={color} size={size}>
-            { children }
+        <ButtonStyled {...props}>
+            { props.children }
         </ButtonStyled>
     )
 }
