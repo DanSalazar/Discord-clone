@@ -13,8 +13,8 @@ function UserPanel ({ handleOptionView }) {
                 <Avatar/>
                 <UserSidebarInfo>
                     <UserSidebarUsername>
-                        {username.length > 12 
-                        ? username.slice(0, 12) + '...'
+                        {username.length > 11 
+                        ? username.slice(0, 11) + '...'
                         : username
                         }
                     </UserSidebarUsername>

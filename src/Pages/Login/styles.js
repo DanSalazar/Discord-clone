@@ -14,7 +14,7 @@ const showAnim = keyframes`
 
 export const AppLayoutLoggedOut = styled.div`
     display: grid;
-    background: var(--background-primary);
+    background: var(--background-color);
     width: 100%;
     height: 100vh;
     place-items: center;
