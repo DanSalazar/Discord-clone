@@ -1,16 +1,16 @@
 import { Headset, Mic, Settings } from '@material-ui/icons'
 import React, { useContext } from 'react'
 import { UserState } from '../../Store/store'
-import Avatar from '../Avatar/Avatar'
+import AvatarWrapper from '../Avatar/AvatarWrapper'
 import { UserSidebar, UserSidebarControls, UserSidebarControlsWrapper, UserSidebarId, UserSidebarInfo, UserSidebarStatus, UserSidebarUsername } from './userPanelStyles'
 
 function UserPanel ({ handleOptionView }) {
-    const { username, tag } = useContext(UserState)
+    const { username, tag, status } = useContext(UserState)
 
     return (
         <UserSidebar>
             <UserSidebarStatus>
-                <Avatar/>
+                <AvatarWrapper status={status} background='secondaryAlt' />
                 <UserSidebarInfo>
                     <UserSidebarUsername>
                         {username.length > 11 

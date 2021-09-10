@@ -17,6 +17,9 @@
     --text-message: #d4d4d4;
     --chat-input-background: #3c3f44;
     --navigation-color-channel: #38aa55;
+    --user-status-connected: #3eb65c;
+    --user-status-absent: #e6c018;
+    --user-status-busy: #d32721;
     --error-color: #b82c2c;
     --primary-color: #5865F2;
     --primary-color-hover: #404EED;

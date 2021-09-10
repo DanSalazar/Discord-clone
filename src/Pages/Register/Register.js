@@ -24,7 +24,7 @@ function Register () {
             setErrors({ error: false, message: '' })
             const { value: username } = usernameField
             const { value: password } = passwordField
-            localStorage.setItem('user', JSON.stringify({ username, password }))
+            window.localStorage.setItem('user', JSON.stringify({ username, password }))
 
             setTimeout(() => {
                 history.push('/login')
