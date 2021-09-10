@@ -4,7 +4,7 @@ export const UserAuth = React.createContext({})
 export const UserState = React.createContext({})
 
 export function UserProvider ({children}) {
-    const [isLogin, setLogin] = useState(localStorage.getItem('token') || false)
+    const [isLogin, setLogin] = useState(window.localStorage.getItem('user') && window.localStorage.getItem('token'))
     
     return <UserAuth.Provider value={{ isLogin, setLogin } }>
         {children}
@@ -12,10 +12,10 @@ export function UserProvider ({children}) {
 }
 
 export function UserDataProvider ({children}) {
-    const [user, ] = useState(JSON.parse(localStorage.getItem('user')))
+    const [user, ] = useState(JSON.parse(window.localStorage.getItem('user')))
     const [username, setUsername] = useState(user.username)
     const [tag, setTag] = useState('#0001')
-    const [status, setStatus] = useState('connected')
+    const [status, setStatus] = useState('absent')
 
     // If the tag is less than 4
     const setTagOfUser = (tag) => {

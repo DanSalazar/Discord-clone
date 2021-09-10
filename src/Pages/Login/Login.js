@@ -15,14 +15,14 @@ function Login () {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const { username, password } = JSON.parse(localStorage.getItem('user')) || false
+        const { username, password } = JSON.parse(window.localStorage.getItem('user')) || false
 
         if (usernameField.value === '' || passwordField.value === '') setErrors({ error: true, message: 'Complete all the fields' })
         else if (usernameField.value !== username) setErrors({ error: true, message: 'User not found' })
         else if (passwordField.value !== password) setErrors({ error: true, message: 'Password not valid' })
         else {
             setLogin(true)
-            localStorage.setItem('token', 'u5-42-86-d3')
+            window.localStorage.setItem('token', 'u5-42-86-d3')
             setTimeout(() => {
                 history.push('/home')
             }, 2500)

@@ -26,7 +26,7 @@ export const SidebarSearchBar = styled.input`
     border-radius: var(--b-radius);
 `
 
-export const SidebarContent = styled.div`
+export const SidebarContent = styled.section`
     padding: 0 0.875em;
 `
 
