@@ -10,24 +10,29 @@ export const SidebarWrapper = styled.div`
 `
 
 export const SidebarHeader = styled.header`
-    height: 60px;
+    height: 50px;
     display: grid;
     place-items: center;
 `
 
-export const SidebarSearchBar = styled.input`
+export const SidebarSearchBar = styled.button`
     background: var(--background-color);
     color: var(--text-secondary);
     display: block;
     margin: auto;
     border: 0;
-    padding: 6px;
+    padding: 5px 2px;
     width: 90%;
     border-radius: var(--b-radius);
+    font-size: 0.75em;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 0.875em;
+    }
 `
 
 export const SidebarContent = styled.section`
-    padding: 0 0.875em;
+    padding: 0 0.5em;
 `
 
 export const SidebarChannelsWrapper =  styled.div`

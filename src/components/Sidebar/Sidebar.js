@@ -18,7 +18,9 @@ function Sidebar ({ handleOptionView }) {
     return (
         <SidebarWrapper>
             <SidebarHeader>
-                <SidebarSearchBar placeholder="Search or initiate a conversation"/>
+                <SidebarSearchBar>
+                  Search or initiate a conversation
+                </SidebarSearchBar>
             </SidebarHeader>
 
             <SidebarContent>
