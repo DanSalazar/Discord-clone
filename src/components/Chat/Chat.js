@@ -14,7 +14,7 @@ function Chat () {
                     <Add/>
                 </ChatInputDragAndDrog>
 
-                <ChatInputMessage placeholder="Send message to" />
+                <ChatInputMessage placeholder="Send message to"  />
 
                 <ChatInputControlsWrapper>
                     <ChatInputControls>

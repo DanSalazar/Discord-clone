@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChatMessageWrapper, ChatChannelTimestamp, ChatChannelName, ChatChannelMessage, ChannelMessageContent, ChatChannelNameAndTimeWrapper } from './chatBoxStyles'
+import { ChatMessageWrapper, ChatChannelTimestamp, ChatChannelName, ChatChannelMessage, ChannelMessageContent, ChatChannelNameAndTimeWrapper } from './chatStyles'
 import Avatar from '../Avatar/Avatar'
 
 function ChatMessage ({ channelName, messageContent }) {

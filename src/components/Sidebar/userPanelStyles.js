@@ -48,14 +48,14 @@ export const UserSidebarControlsWrapper = styled.div`
 `
 
 export const UserSidebarControls = styled.button`
-    color: var(--text-secondary);
-    display: inline-block;
+    color: var(--text-primary-alt);
+    display: flex;
+    align-items: center;
     border: 0;
     background: 0;
+    padding: 6px;
     cursor: pointer;
-    padding: 4px;
     border-radius: var(--b-radius);
-    transition: var(--duration-transitions);
 
     svg {
         font-size: 20px;

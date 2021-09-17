@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const ChatView = styled.div`
     width: 100%;
     padding: 0 0 1em 0;
-    background: var(--background-tertiary);
+    background: var(--background-primary);
     display: none;
     flex-direction: column;
 
@@ -66,7 +66,7 @@ export const ChatHeaderInputBox = styled.div`
     overflow: hidden;
     padding: 0 8px;
     margin: 0 6px;
-    width: 180px;
+    width: 150px;
     height: 25px;
 `
 
@@ -100,10 +100,11 @@ export const ChatHeaderInput = styled.input`
 export const ChatInputBox = styled.div`
     background: var(--chat-input-background);
     display: flex;
+    align-items: center;
     width: 95%;
     margin: auto;
-    height: 55px;
-    padding: 6px;
+    height: auto;
+    padding: 8px;
     border-radius: var(--b-radius);
 `
 
@@ -114,7 +115,6 @@ export const ChatInputMessage = styled.input`
     outline: none;
     margin: 0 8px;
     font-size: 15px;
-    height: 100%;
     border: 0;
 
     &::placeholder {
@@ -125,12 +125,12 @@ export const ChatInputDragAndDrog = styled.button`
     background: var(--chat-input-background);
     cursor: pointer;
     color: var(--text-primary-alt);
+    height: 100%;
     border: 0;
-    width: 30px;
     outline: 0;
 
     svg {
-        font-size: 18px;
+        font-size: 1.5em;
     }
     
     &:hover {
@@ -141,24 +141,71 @@ export const ChatInputDragAndDrog = styled.button`
 
 export const ChatInputControlsWrapper = styled.div`
     display: flex;
-    align-items: center;
     padding: 0 12px;
     justify-content: space-around;
     width: 120px;
-    height: 100%;
 `
 
 export const ChatInputControls = styled.button`
     border: 0;
     background: none;
     color: var(--text-primary-alt);
-    transition: var(--duration-transitions);
     outline: 0;
     cursor: pointer;
-    width: 25px;
-    height: 25px;
-    
+
+    svg {
+      font-size: 2em;
+    }
+
     &:hover {
         color: var(--text-primary)
     }
+`
+
+// Chat box styles
+
+export const ChatBoxWrapper = styled.div`
+    height: 100%;
+    overflow-y: auto;
+`
+
+export const ChatBoxMessagesContent = styled.div`
+    width: 100%;
+` 
+
+export const ChatMessageWrapper = styled.div`
+    display: flex;
+    width: 95%;
+    height: auto;
+    padding: 4px;
+    margin: 20px auto;
+`
+
+export const ChannelMessageContent = styled.div`
+    margin: 0 10px;
+`
+
+export const ChatChannelNameAndTimeWrapper = styled.div`
+
+`
+
+export const ChatChannelName = styled.p`
+    font-weight: 500;
+    display: inline-block;
+    margin: 0;
+    color: var(--text-primary);
+`
+
+export const ChatChannelTimestamp = styled.time`
+    color: var(--text-secondary);
+    font-size: 0.75em;
+    font-weight: 500;
+    margin: 0 5px;
+`
+
+export const ChatChannelMessage = styled.div`
+    color: var(--text-message);
+    margin: 0;
+    word-break: break-all;
+    font-size: 16px;
 `
