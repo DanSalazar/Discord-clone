@@ -1,12 +1,10 @@
-import React from 'react'
-import { useContext } from 'react'
+import React, { useState } from 'react'
 import { Redirect, Route } from 'react-router-dom'
-import { UserAuth } from '../Store/store'
 
 function ProtectedRoute ({ component, ...rest }) {
-    const { isLogin } = useContext(UserAuth)
+    const [isLogin, ] = useState(window.localStorage.getItem('user') && window.localStorage.getItem('token'))
 
-    if(isLogin) return <Route component={component} {...rest} />
+    if (isLogin) return <Route component={component} {...rest} />
     
     return <Redirect to='/login' />
 }

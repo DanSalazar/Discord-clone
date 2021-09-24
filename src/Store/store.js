@@ -1,15 +1,6 @@
 import React, { useState } from 'react'
 
-export const UserAuth = React.createContext({})
 export const UserState = React.createContext({})
-
-export function UserProvider ({children}) {
-    const [isLogin, setLogin] = useState(window.localStorage.getItem('user') && window.localStorage.getItem('token'))
-    
-    return <UserAuth.Provider value={{ isLogin, setLogin } }>
-        {children}
-    </UserAuth.Provider>
-}
 
 export function UserDataProvider ({children}) {
     const [user, ] = useState(JSON.parse(window.localStorage.getItem('user')))

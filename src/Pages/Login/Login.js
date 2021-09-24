@@ -1,16 +1,14 @@
-import React, { useContext, useState } from 'react'
+import React, {  useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Input, Label, LinkStyled, ErrorText, SpanInfo } from '../../components/GlobalComponents/styles'
 import { AppLayoutLoggedOut, FormLogin, LoginBox } from './styles'
 import useField from '../../hooks/useField'
 import Button from '../../components/Button/Button'
-import { UserAuth } from '../../Store/store'
 
 function Login () {
     const usernameField = useField({ type: 'text', name: 'username' })
     const passwordField = useField({ type: 'password', name: 'password' })
     const [errors, setErrors] = useState({ error: false, message: '' })
-    const { setLogin }  = useContext(UserAuth)
     const history = useHistory()
 
     const handleSubmit = (e) => {
@@ -21,7 +19,6 @@ function Login () {
         else if (usernameField.value !== username) setErrors({ error: true, message: 'User not found' })
         else if (passwordField.value !== password) setErrors({ error: true, message: 'Password not valid' })
         else {
-            setLogin(true)
             window.localStorage.setItem('token', 'u5-42-86-d3')
             setTimeout(() => {
                 history.push('/home')
