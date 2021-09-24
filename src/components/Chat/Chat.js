@@ -1,33 +1,21 @@
-import { Add, EmojiEmotions, Gif, Send } from '@material-ui/icons'
-import React from 'react'
+import React, { useState } from 'react'
 import ChatBox from './ChatBox'
 import ChatHeader from './ChatHeader'
-import { ChatInputBox, ChatInputControls, ChatInputControlsWrapper, ChatInputDragAndDrog, ChatInputMessage, ChatView } from './chatStyles'
+import ChatInput from './ChatInput'
+import { channel } from './chat_helpers'
+import { ChatView } from './chatStyles'
 
 function Chat () {
+  const [messages, setMessages] = useState(channel.messages)
+
+  const sendMessage = (message) => {
+    setMessages(messages.concat({...message, id: messages.length + 1 }))
+  }
     return (
         <ChatView>
             <ChatHeader/>
-            <ChatBox/>
-            <ChatInputBox>
-                <ChatInputDragAndDrog>
-                    <Add/>
-                </ChatInputDragAndDrog>
-
-                <ChatInputMessage placeholder="Send message to"  />
-
-                <ChatInputControlsWrapper>
-                    <ChatInputControls>
-                        <Gif/>
-                    </ChatInputControls>
-                    <ChatInputControls>
-                        <EmojiEmotions/>
-                    </ChatInputControls>
-                    <ChatInputControls>
-                        <Send/>
-                    </ChatInputControls>
-                </ChatInputControlsWrapper>
-            </ChatInputBox>
+            <ChatBox messages={messages} />
+            <ChatInput sendMessage={sendMessage} />
         </ChatView>
     )
 }

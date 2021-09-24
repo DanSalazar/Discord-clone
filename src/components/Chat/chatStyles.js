@@ -97,11 +97,13 @@ export const ChatHeaderInput = styled.input`
     }
 `
 
+export const ChatForm = styled.form``
+
 export const ChatInputBox = styled.div`
     background: var(--chat-input-background);
     display: flex;
     align-items: center;
-    width: 95%;
+    width: 96%;
     margin: auto;
     height: auto;
     padding: 8px;
@@ -175,9 +177,8 @@ export const ChatBoxMessagesContent = styled.div`
 
 export const ChatMessageWrapper = styled.div`
     display: flex;
-    width: 95%;
-    height: auto;
-    padding: 4px;
+    width: 96%;
+    padding: 5px 0;
     margin: 20px auto;
 `
 
@@ -185,27 +186,25 @@ export const ChannelMessageContent = styled.div`
     margin: 0 10px;
 `
 
-export const ChatChannelNameAndTimeWrapper = styled.div`
-
-`
+export const ChatChannelNameAndTimeWrapper = styled.div``
 
 export const ChatChannelName = styled.p`
     font-weight: 500;
     display: inline-block;
+    font-size: 1em;
     margin: 0;
     color: var(--text-primary);
 `
 
 export const ChatChannelTimestamp = styled.time`
     color: var(--text-secondary);
-    font-size: 0.75em;
-    font-weight: 500;
-    margin: 0 5px;
+    font-size: 0.7em;
+    margin: 0 6px;
 `
 
 export const ChatChannelMessage = styled.div`
     color: var(--text-message);
     margin: 0;
     word-break: break-all;
-    font-size: 16px;
+    font-size: 1em;
 `

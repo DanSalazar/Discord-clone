@@ -2,21 +2,21 @@ import React from 'react'
 import { ChatMessageWrapper, ChatChannelTimestamp, ChatChannelName, ChatChannelMessage, ChannelMessageContent, ChatChannelNameAndTimeWrapper } from './chatStyles'
 import Avatar from '../Avatar/Avatar'
 
-function ChatMessage ({ channelName, messageContent }) {
+function ChatMessage ({ channelName, message, avatar }) {
     return (
         <ChatMessageWrapper>
-            <Avatar width="40px" height="40px"/>
+            <Avatar width="40px" height="40px" avatarImage={avatar} />
             <ChannelMessageContent>
                 <ChatChannelNameAndTimeWrapper> 
                     <ChatChannelName>
-                        { channelName }
+                        {channelName}
                     </ChatChannelName>
-                    <ChatChannelTimestamp>
-                        <span> {new Date(Date.now()).toLocaleDateString()} </span>
+                    <ChatChannelTimestamp dateTime={new Date(Date.now()).toLocaleDateString()}>
+                        {new Date(Date.now()).toLocaleDateString()}
                     </ChatChannelTimestamp>    
                 </ChatChannelNameAndTimeWrapper>
                 <ChatChannelMessage>
-                    { messageContent }
+                    {message}
                 </ChatChannelMessage>
             </ChannelMessageContent>
         </ChatMessageWrapper>
