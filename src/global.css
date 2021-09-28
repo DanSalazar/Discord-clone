@@ -25,6 +25,8 @@
     --primary-color-hover: #404EED;
     --secondary-color: #575757;
     --secondary-color-hover: #666666;
+    --scrollbar-color-thumb: #202225;
+    --scrollbar-color-track: #2f3136; 
     --b-radius: 5px;
     --duration-transitions: 0.25s ease-in-out;
     --duration-transitions-tiny: 0.1s ease-in-out;

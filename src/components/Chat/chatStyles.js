@@ -103,7 +103,7 @@ export const ChatInputBox = styled.div`
     background: var(--chat-input-background);
     display: flex;
     align-items: center;
-    width: 96%;
+    width: 98%;
     margin: auto;
     height: auto;
     padding: 8px;
@@ -169,16 +169,29 @@ export const ChatInputControls = styled.button`
 export const ChatBoxWrapper = styled.div`
     height: 100%;
     overflow-y: auto;
+
+    ::-webkit-scrollbar {
+      width: 0.45em;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--scrollbar-color-track);
+      border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-color-thumb);
+      border-radius: 9999px;
+    }
 `
 
 export const ChatBoxMessagesContent = styled.div`
-    width: 100%;
 ` 
 
 export const ChatMessageWrapper = styled.div`
     display: flex;
-    width: 96%;
-    padding: 5px 0;
+    width: 98%;
+    padding: 3px 0;
     margin: 20px auto;
 `
 
