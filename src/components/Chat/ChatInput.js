@@ -14,12 +14,15 @@ function ChatInput ({ sendMessage }) {
   const handleForm = (e) => {
     e.preventDefault()
 
-    const messageToSend = {
-      author: { username, avatar },
-      content: message
+    if (message) {
+      const messageToSend = {
+        author: { username, avatar },
+        content: message
+      }
+
+      sendMessage(messageToSend)
     }
 
-    sendMessage(messageToSend)
     setMessage('')
   }
 
