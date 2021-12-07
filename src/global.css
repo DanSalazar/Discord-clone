@@ -3,6 +3,7 @@
   --background-primary: #36393f;
   --background-secondary: #2f3136;
   --background-secondary-alt: #292b2f;
+  --background-form: #36393f;
   --background-primary-hover: #36393f75;
   --background-secondary-hover: #2f313675;
   --background-tertiary: #33353a;
@@ -15,6 +16,7 @@
   --text-secondary-hover: #c5c9d4;
   --text-channels: #8b8b8b;
   --text-message: #d4d4d4;
+  --text-link: #00AFF4;
   --chat-input-background: #40444b;
   --navigation-color-channel: #38aa55;
   --user-status-connected: #3eb65c;

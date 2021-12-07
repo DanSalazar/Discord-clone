@@ -53,7 +53,7 @@ function Login() {
           </Button>
            <SpanInfo>
              ¿You need an account?
-             <LinkStyled to='/register'> Register </LinkStyled>
+             <LinkStyled to='/register'><strong>Register</strong></LinkStyled>
            </SpanInfo>
          </FormLogin>
         </LoginBox>

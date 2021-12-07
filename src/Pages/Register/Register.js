@@ -65,11 +65,10 @@ function Register() {
             {errors && <ErrorText> {errors.message} </ErrorText>}
 
             <Button color='primary' size='all'>
-              {' '}
-              Register{' '}
+              Register
             </Button>
             <SpanInfo>
-              ¿You have an account? <LinkStyled to='/login'> Login </LinkStyled>
+              ¿You have an account? <LinkStyled to='/login'><strong>Login</strong></LinkStyled>
             </SpanInfo>
           </FormRegister>
         </RegisterBox>

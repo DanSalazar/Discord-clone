@@ -2,15 +2,15 @@ import styled, { keyframes } from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const animBounceTiny = keyframes`
-    0% {
-        transform: scale(1.1);
-        opacity: 0.5;
-    }
+  0% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
 
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 `
 
 export const Label = styled.label`
@@ -23,7 +23,7 @@ export const Label = styled.label`
 export const Input = styled.input`
   width: 100%;
   margin: 12px 0;
-  background: var(--background-secondary-alt);
+  background: var(--background-secondary);
   color: var(--text-primary);
   border: 1px solid var(--background-color);
   padding: 12px;
@@ -31,7 +31,7 @@ export const Input = styled.input`
   transition: var(--duration-transitions-tiny);
 
   &:focus {
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--text-link);
   }
 `
 
@@ -45,12 +45,11 @@ export const ErrorText = styled.p`
 export const SpanInfo = styled.span`
   color: var(--text-secondary);
   font-size: 14px;
-  margin: 0 2px;
 `
 
 export const LinkStyled = styled(Link)`
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--text-link);
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;

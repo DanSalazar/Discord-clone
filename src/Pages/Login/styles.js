@@ -21,7 +21,7 @@ export const AppLayoutLoggedOut = styled.div`
 `
 
 export const LoginBox = styled.div`
-  background: var(--background-secondary);
+  background: var(--background-form);
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
   width: 80%;
   display: flex;
@@ -39,5 +39,13 @@ export const LoginBox = styled.div`
 `
 
 export const FormLogin = styled.form`
-  width: 80%;
+  width: 75%;
+
+  button {
+    margin-bottom: 12px;
+  }
+
+  span a {
+    margin-left: 5px;
+  }
 `
