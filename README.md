@@ -1,3 +1,12 @@
+# Discord Clone
+Clone ui of discord app
+
+Login screen
+![alt text](./src/assets/login-screen.png)
+
+Chat Screen
+![alt text](./src/assets/chat-screen.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
