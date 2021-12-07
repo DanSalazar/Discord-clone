@@ -1,23 +1,23 @@
 import styled, { keyframes } from 'styled-components'
 
 const showAnim = keyframes`
-    0% {
-        opacity: 0.4;
-        transform: scale(1.2);
-    }
+  0% {
+    opacity: 0.4;
+    transform: scale(1.2);
+  }
 
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 `
 
 export const AppLayoutLoggedOut = styled.div`
   display: grid;
-  background: var(--background-color);
   width: 100%;
-  height: 100vh;
   place-items: center;
+  min-height: 100vh;
+  position: absolute;
 `
 
 export const LoginBox = styled.div`

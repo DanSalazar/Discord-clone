@@ -11,6 +11,7 @@ import {
   SpanInfo
 } from '../../components/GlobalComponents/styles'
 import { AppLayoutLoggedOut } from '../Login/styles'
+import Background from '../../components/Background'
 
 function Register() {
   const usernameField = useField({ type: 'text', name: 'username' })
@@ -49,28 +50,31 @@ function Register() {
   }
 
   return (
-    <AppLayoutLoggedOut>
-      <RegisterBox>
-        <FormRegister onSubmit={handleSubmit}>
-          <Label> Username </Label>
-          <Input {...usernameField} />
-          <Label> Password </Label>
-          <Input {...passwordField} />
-          <Label> Confirm Password </Label>
-          <Input {...confirmPasswordField} />
+    <>
+      <Background/>
+      <AppLayoutLoggedOut>
+        <RegisterBox>
+          <FormRegister onSubmit={handleSubmit}>
+            <Label> Username </Label>
+            <Input {...usernameField} />
+            <Label> Password </Label>
+            <Input {...passwordField} />
+            <Label> Confirm Password </Label>
+            <Input {...confirmPasswordField} />
 
-          {errors && <ErrorText> {errors.message} </ErrorText>}
+            {errors && <ErrorText> {errors.message} </ErrorText>}
 
-          <Button color='primary' size='all'>
-            {' '}
-            Register{' '}
-          </Button>
-          <SpanInfo>
-            ¿You have an account? <LinkStyled to='/login'> Login </LinkStyled>
-          </SpanInfo>
-        </FormRegister>
-      </RegisterBox>
-    </AppLayoutLoggedOut>
+            <Button color='primary' size='all'>
+              {' '}
+              Register{' '}
+            </Button>
+            <SpanInfo>
+              ¿You have an account? <LinkStyled to='/login'> Login </LinkStyled>
+            </SpanInfo>
+          </FormRegister>
+        </RegisterBox>
+      </AppLayoutLoggedOut>
+    </>
   )
 }
 

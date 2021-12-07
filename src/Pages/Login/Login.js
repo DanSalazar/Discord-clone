@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import {
   Input,
@@ -10,6 +10,7 @@ import {
 import { AppLayoutLoggedOut, FormLogin, LoginBox } from './styles'
 import useField from '../../hooks/useField'
 import Button from '../../components/Button/Button'
+import Background from '../../components/Background'
 
 function Login() {
   const usernameField = useField({ type: 'text', name: 'username' })
@@ -37,27 +38,27 @@ function Login() {
   }
 
   return (
-    <AppLayoutLoggedOut>
-      <LoginBox>
-        <FormLogin onSubmit={handleSubmit}>
-          <Label> Username </Label>
-          <Input {...usernameField} />
-          <Label> Password </Label>
-          <Input {...passwordField} />
-
-          {errors && <ErrorText> {errors.message} </ErrorText>}
-
-          <Button color='primary' size='all'>
-            {' '}
-            Login{' '}
+    <>
+      <Background/>
+      <AppLayoutLoggedOut>
+        <LoginBox>
+         <FormLogin onSubmit={handleSubmit}>
+           <Label> Username </Label>
+           <Input {...usernameField} />
+           <Label> Password </Label>
+           <Input {...passwordField} />
+           {errors && <ErrorText> {errors.message} </ErrorText>}
+           <Button color='primary' size='all'>
+             Login
           </Button>
-          <SpanInfo>
-            ¿You need an account?{' '}
-            <LinkStyled to='/register'> Register </LinkStyled>
-          </SpanInfo>
-        </FormLogin>
-      </LoginBox>
-    </AppLayoutLoggedOut>
+           <SpanInfo>
+             ¿You need an account?
+             <LinkStyled to='/register'> Register </LinkStyled>
+           </SpanInfo>
+         </FormLogin>
+        </LoginBox>
+      </AppLayoutLoggedOut>
+    </>
   )
 }
 
