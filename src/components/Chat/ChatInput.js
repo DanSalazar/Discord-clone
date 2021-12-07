@@ -1,11 +1,18 @@
 import React, { useState, useContext } from 'react'
 import { UserState } from '../../Store/store'
 import { Add, EmojiEmotions, Gif, Send } from '@material-ui/icons'
-import { ChatInputBox, ChatInputControls, ChatInputControlsWrapper, ChatInputDragAndDrog, ChatForm, ChatInputMessage } from './chatStyles'
+import {
+  ChatInputBox,
+  ChatInputControls,
+  ChatInputControlsWrapper,
+  ChatInputDragAndDrog,
+  ChatForm,
+  ChatInputMessage
+} from './chatStyles'
 
-function ChatInput ({ sendMessage }) {
+function ChatInput({ sendMessage }) {
   const [message, setMessage] = useState('')
-  const { username, avatar} = useContext(UserState)
+  const { username, avatar } = useContext(UserState)
 
   const handleMessage = ({ target }) => {
     setMessage(target.value)
@@ -29,27 +36,27 @@ function ChatInput ({ sendMessage }) {
   return (
     <ChatForm onSubmit={handleForm}>
       <ChatInputBox>
-          <ChatInputDragAndDrog>
-              <Add/>
-          </ChatInputDragAndDrog>
+        <ChatInputDragAndDrog>
+          <Add />
+        </ChatInputDragAndDrog>
 
-          <ChatInputMessage 
-            placeholder="Send message to" 
-            onChange={handleMessage} 
-            value={message} 
-          />
+        <ChatInputMessage
+          placeholder='Send message to'
+          onChange={handleMessage}
+          value={message}
+        />
 
-          <ChatInputControlsWrapper>
-              <ChatInputControls>
-                  <Gif/>
-              </ChatInputControls>
-              <ChatInputControls>
-                  <EmojiEmotions/>
-              </ChatInputControls>
-              <ChatInputControls>
-                  <Send/>
-              </ChatInputControls>
-          </ChatInputControlsWrapper>
+        <ChatInputControlsWrapper>
+          <ChatInputControls>
+            <Gif />
+          </ChatInputControls>
+          <ChatInputControls>
+            <EmojiEmotions />
+          </ChatInputControls>
+          <ChatInputControls>
+            <Send />
+          </ChatInputControls>
+        </ChatInputControlsWrapper>
       </ChatInputBox>
     </ChatForm>
   )

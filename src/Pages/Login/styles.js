@@ -13,31 +13,31 @@ const showAnim = keyframes`
 `
 
 export const AppLayoutLoggedOut = styled.div`
-    display: grid;
-    background: var(--background-color);
-    width: 100%;
-    height: 100vh;
-    place-items: center;
+  display: grid;
+  background: var(--background-color);
+  width: 100%;
+  height: 100vh;
+  place-items: center;
 `
 
 export const LoginBox = styled.div`
-    background: var(--background-secondary);
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-    border-radius: var(--b-radius);
-    height: 400px;
-    animation: 0.15s ${showAnim} ease-in-out;
+  background: var(--background-secondary);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border-radius: var(--b-radius);
+  height: 400px;
+  animation: 0.15s ${showAnim} ease-in-out;
 
-    @media screen and (min-width: 1024px){
-        width: 600px;
-    }
+  @media screen and (min-width: 1024px) {
+    width: 600px;
+  }
 `
 
 export const FormLogin = styled.form`
-    width: 80%;
+  width: 80%;
 `
