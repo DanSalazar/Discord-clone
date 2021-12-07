@@ -18,12 +18,20 @@ export const OptionEditFormContainer = styled.form`
 `
 
 export const OptionEditBox = styled.div`
-  width: 350px;
+  width: 500px;
   overflow: hidden;
-  height: 300px;
+  min-height: 420px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   border-radius: var(--b-radius);
   background: var(--background-primary);
+
+  input[type='file'] {
+    margin-top: 12px;
+  }
 `
 
 export const OptionEditBoxButtonContainer = styled.div`
@@ -36,5 +44,5 @@ export const OptionEditBoxButtonContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  height: 70px;
+  height: 65px;
 `

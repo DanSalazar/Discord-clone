@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import {
   OptionEditFormContainer,
   OptionEditBoxButtonContainer,
@@ -8,6 +8,7 @@ import Button from '../Button/Button'
 import { UserState } from '../../Store/store'
 import useField from '../../hooks/useField'
 import { Label, Input } from '../GlobalComponents/styles'
+import EditAvatar from './EditAvatar'
 
 function OptionEdit({ handleOptionView }) {
   const username = useField({ type: 'text', maxLength: '15' })
@@ -37,6 +38,8 @@ function OptionEdit({ handleOptionView }) {
 
   return (
     <OptionEditBox>
+      <Label>Avatar</Label>
+      <EditAvatar avatar={user.avatar} setAvatar={user.setAvatar} />
       <OptionEditFormContainer onSubmit={handleSubmit}>
         <Label> Username </Label>
         <Input {...username} />

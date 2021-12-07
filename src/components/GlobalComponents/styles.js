@@ -15,8 +15,9 @@ export const animBounceTiny = keyframes`
 
 export const Label = styled.label`
   color: var(--text-primary-alt);
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
+  text-transform: uppercase;
   margin: 8px 0;
 `
 

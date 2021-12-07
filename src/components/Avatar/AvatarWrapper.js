@@ -4,11 +4,13 @@ import Avatar from './Avatar'
 
 function AvatarWrapper({ status, background, userAvatar }) {
   return (
-    <AvatarContainer role='img' background={background}>
+    <AvatarContainer aria-label='Avatar' background={background}>
       <Avatar avatarImage={userAvatar} />
+      {status && background &&
       <AvatarStatus background={background}>
         <AvatarStatusMask status={status} />
       </AvatarStatus>
+      }
     </AvatarContainer>
   )
 }
