@@ -1,5 +1,6 @@
-import React, { useState, useContext } from 'react'
-import { UserState } from '../../Store/store'
+import { useState } from 'react'
+import { useRecoilValue } from 'recoil'
+import User from '../../recoil/user'
 import { Add, EmojiEmotions, Gif, Send } from '@material-ui/icons'
 import {
   ChatInputBox,
@@ -12,7 +13,7 @@ import {
 
 function ChatInput({ sendMessage }) {
   const [message, setMessage] = useState('')
-  const { username, avatar } = useContext(UserState)
+  const user = useRecoilValue(User)
 
   const handleMessage = ({ target }) => {
     setMessage(target.value)
@@ -23,7 +24,7 @@ function ChatInput({ sendMessage }) {
 
     if (message) {
       const messageToSend = {
-        author: { username, avatar },
+        author: { avatar: user.avatar, username: user.username },
         content: message
       }
 

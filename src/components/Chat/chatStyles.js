@@ -101,9 +101,9 @@ export const ChatInputBox = styled.div`
   display: flex;
   align-items: center;
   width: 98%;
-  margin: auto;
   height: auto;
-  padding: 8px;
+  margin: auto;
+  padding: 12px;
   border-radius: var(--b-radius);
 `
 
@@ -124,7 +124,6 @@ export const ChatInputDragAndDrog = styled.button`
   background: var(--chat-input-background);
   cursor: pointer;
   color: var(--text-primary-alt);
-  height: 100%;
   border: 0;
   outline: 0;
 

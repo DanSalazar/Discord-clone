@@ -10,8 +10,8 @@ function App() {
     <Router>
       <Switch>
         <ProtectedRoute path='/home' component={Home} />
-        <Route path='/login' component={Login} />
-        <Route path='/register' component={Register} />
+        <ProtectedRoute path='/login' component={Login} toHome={true}></ProtectedRoute>
+        <ProtectedRoute path='/register' component={Register} toHome={true}></ProtectedRoute>
       </Switch>
     </Router>
   )

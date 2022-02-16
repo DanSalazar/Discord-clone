@@ -13,6 +13,7 @@ import {
   SidebarOptionButtons,
   SidebarOptionButtonTitle
 } from './sidebarStyles'
+import PrivateChannel from '../PrivateChannels/PrivatesChannels'
 
 function Sidebar({ handleOptionView }) {
   return (
@@ -35,7 +36,9 @@ function Sidebar({ handleOptionView }) {
             <Add />
           </SidebarChannelsButton>
 
-          <SidebarChannels></SidebarChannels>
+          <SidebarChannels>
+            <PrivateChannel/>
+          </SidebarChannels>
         </SidebarChannelsWrapper>
       </SidebarContent>
 

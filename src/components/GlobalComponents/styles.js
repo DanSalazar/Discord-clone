@@ -39,8 +39,9 @@ export const Input = styled.input`
 export const ErrorText = styled.p`
   color: var(--error-color);
   margin: 0;
+  font-weight: 600;
   font-size: 14px;
-  margin: 5px 0 0 0;
+  margin: 10px 0;
 `
 
 export const SpanInfo = styled.span`

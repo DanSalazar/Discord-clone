@@ -30,7 +30,7 @@ function Login() {
     else if (passwordField.value !== password)
       setErrors({ error: true, message: 'Password not valid' })
     else {
-      window.localStorage.setItem('token', 'u5-42-86-d3')
+      window.localStorage.setItem('isLogin', '1')
       setTimeout(() => {
         history.push('/home')
       }, 2500)

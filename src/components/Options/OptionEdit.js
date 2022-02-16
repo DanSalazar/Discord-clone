@@ -1,19 +1,27 @@
-import { useContext } from 'react'
+import { useRecoilState } from 'recoil'
+import User from '../../recoil/user'
 import {
   OptionEditFormContainer,
   OptionEditBoxButtonContainer,
   OptionEditBox
 } from './stylesOptionsView'
 import Button from '../Button/Button'
-import { UserState } from '../../Store/store'
 import useField from '../../hooks/useField'
 import { Label, Input } from '../GlobalComponents/styles'
 import EditAvatar from './EditAvatar'
+import { createTagOfUser } from '../../utils'
 
 function OptionEdit({ handleOptionView }) {
   const username = useField({ type: 'text', maxLength: '15' })
   const tag = useField({ type: 'text', maxLength: '4' })
-  const user = useContext(UserState)
+  const [user, setUser] = useRecoilState(User)
+
+  const setAvatar = (avatar) => {
+    setUser({
+      ...user,
+      avatar
+    })
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -24,22 +32,27 @@ function OptionEdit({ handleOptionView }) {
     }
 
     if (username.value !== '' && tag.value === '') {
-      user.setUsername(username.value)
+      setUser({
+        ...user,
+        username: username.value,
+      })
       handleOptionView()
-      const randomTag = `${Math.ceil(Math.random() * 9999)}`
-      user.setTagOfUser(randomTag)
       return
     }
-
-    user.setUsername(username.value)
-    user.setTagOfUser(tag.value)
+ 
+    const newTag = createTagOfUser(tag.value)
+    setUser({
+      ...user,
+      username: username.value,
+      tag: newTag
+    })
     handleOptionView()
   }
 
   return (
     <OptionEditBox>
       <Label>Avatar</Label>
-      <EditAvatar avatar={user.avatar} setAvatar={user.setAvatar} />
+      <EditAvatar avatar={user.avatar} setAvatar={setAvatar} />
       <OptionEditFormContainer onSubmit={handleSubmit}>
         <Label> Username </Label>
         <Input {...username} />

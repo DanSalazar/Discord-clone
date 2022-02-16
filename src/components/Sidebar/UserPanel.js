@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import { useRecoilValue } from 'recoil'
+import User from '../../recoil/user' 
 import { Headset, Mic, Settings } from '@material-ui/icons'
-import { UserState } from '../../Store/store'
 import AvatarWrapper from '../Avatar/AvatarWrapper'
 import {
   UserSidebar,
@@ -13,14 +13,12 @@ import {
 } from './userPanelStyles'
 
 function UserPanel({ handleOptionView }) {
-  const { username, tag, status, avatar } = useContext(UserState)
+  const { username, avatar, tag } = useRecoilValue(User)
 
   return (
     <UserSidebar>
       <UserSidebarStatus>
         <AvatarWrapper
-          status={status}
-          background='secondaryAlt'
           userAvatar={avatar}
         />
         <UserSidebarInfo>

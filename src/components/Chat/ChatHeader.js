@@ -22,7 +22,7 @@ import {
 function ChatHeader({ channelName }) {
   return (
     <ChatHeaderWrapper>
-      <ChatHeaderChannelName>User</ChatHeaderChannelName>
+      <ChatHeaderChannelName>Usertest</ChatHeaderChannelName>
 
       <ChatHeaderToolbar>
         <ChatHeaderButtonsWrapper>
