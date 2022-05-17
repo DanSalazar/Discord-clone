@@ -1,6 +1,8 @@
 import { Add, PeopleAlt } from '@material-ui/icons'
 import React from 'react'
 import UserPanel from './UserPanel'
+import { useRecoilValue } from 'recoil'
+import { channels } from '../../recoil/channels'
 import {
   SidebarWrapper,
   SidebarSearchBar,
@@ -13,9 +15,10 @@ import {
   SidebarOptionButtons,
   SidebarOptionButtonTitle
 } from './sidebarStyles'
-import PrivateChannel from '../PrivateChannels/PrivatesChannels'
+import PrivateChannel from '../PrivateChannels/PrivateChannel'
 
 function Sidebar({ handleOptionView }) {
+  const channelsData = useRecoilValue(channels)
   return (
     <SidebarWrapper>
       <SidebarHeader>
@@ -37,7 +40,13 @@ function Sidebar({ handleOptionView }) {
           </SidebarChannelsButton>
 
           <SidebarChannels>
-            <PrivateChannel/>
+            {channelsData.map(channel => (
+              <PrivateChannel
+                key={channel.id}
+                id={channel.channelId} 
+                username={channel.username}
+                photo_url={channel.photo_url} />
+             ))}
           </SidebarChannels>
         </SidebarChannelsWrapper>
       </SidebarContent>

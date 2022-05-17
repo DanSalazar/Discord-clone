@@ -13,7 +13,7 @@ function ChatBox({ messages }) {
   return (
     <ChatBoxWrapper ref={messagesWrapper}>
       {messages && (
-        <ChatBoxMessagesContent tabindex='-1'>
+        <ChatBoxMessagesContent>
           {messages.map((msg) => (
             <ChatMessage
               key={msg.id}

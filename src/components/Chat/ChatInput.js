@@ -10,6 +10,7 @@ import {
   ChatForm,
   ChatInputMessage
 } from './chatStyles'
+import { v4 as uuid } from 'uuid'
 
 function ChatInput({ sendMessage }) {
   const [message, setMessage] = useState('')
@@ -24,8 +25,9 @@ function ChatInput({ sendMessage }) {
 
     if (message) {
       const messageToSend = {
-        author: { avatar: user.avatar, username: user.username },
-        content: message
+        author: { avatar: user.photo_url, username: user.username },
+        content: message,
+        id: uuid()
       }
 
       sendMessage(messageToSend)

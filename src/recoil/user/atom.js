@@ -5,11 +5,11 @@ const user = JSON.parse(window.localStorage.getItem('user')) || false
 const image = window.localStorage.getItem('avatar') || Avatar
 
 export const UserAtom = atom({
-	key: 'CurrentUser',
-	default: {
-		username: user?.username,
-		avatar: image,
-		tag: '#0001',
-		status: 'Connect'
-	}
+  key: 'CurrentUser',
+  default: {
+    username: user?.username,
+    photo_url: image,
+    tag: '#0001',
+    status: 'Connect'
+  }
 })

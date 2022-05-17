@@ -2,8 +2,7 @@ import styled from 'styled-components'
 
 export const NavigationWrapper = styled.div`
   background: var(--background-color);
-  padding: 0 8px;
-  width: 90px;
+  padding: 0 12px;
 `
 
 export const NavigationTree = styled.div`

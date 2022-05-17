@@ -9,6 +9,8 @@ import {
 } from './chatStyles'
 import Avatar from '../Avatar/Avatar'
 
+const dateNow = () => new Date(Date.now()).toLocaleDateString() 
+
 function ChatMessage({ channelName, message, avatar }) {
   return (
     <ChatMessageWrapper>
@@ -16,9 +18,8 @@ function ChatMessage({ channelName, message, avatar }) {
       <ChannelMessageContent>
         <ChatChannelNameAndTimeWrapper>
           <ChatChannelName>{channelName}</ChatChannelName>
-          <ChatChannelTimestamp
-            dateTime={new Date(Date.now()).toLocaleDateString()}>
-            {new Date(Date.now()).toLocaleDateString()}
+          <ChatChannelTimestamp dateTime={dateNow()}>
+            {dateNow()}
           </ChatChannelTimestamp>
         </ChatChannelNameAndTimeWrapper>
         <ChatChannelMessage>{message}</ChatChannelMessage>

@@ -13,13 +13,13 @@ import {
 } from './userPanelStyles'
 
 function UserPanel({ handleOptionView }) {
-  const { username, avatar, tag } = useRecoilValue(User)
+  const { username, photo_url, tag } = useRecoilValue(User)
 
   return (
     <UserSidebar>
       <UserSidebarStatus>
         <AvatarWrapper
-          userAvatar={avatar}
+          userAvatar={photo_url}
         />
         <UserSidebarInfo>
           <UserSidebarUsername>

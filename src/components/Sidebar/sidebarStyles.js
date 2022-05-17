@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const SidebarWrapper = styled.div`
   background: var(--background-secondary);
   position: relative;
-  width: 300px;
+  min-width: 250px;
   height: 100%;
   display: flex;
   flex-direction: column;

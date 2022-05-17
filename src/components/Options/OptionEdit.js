@@ -15,11 +15,11 @@ function OptionEdit({ handleOptionView }) {
   const username = useField({ type: 'text', maxLength: '15' })
   const tag = useField({ type: 'text', maxLength: '4' })
   const [user, setUser] = useRecoilState(User)
-
-  const setAvatar = (avatar) => {
+ 
+  const setAvatar = (photo_url) => {
     setUser({
       ...user,
-      avatar
+      photo_url
     })
   }
 
@@ -52,7 +52,7 @@ function OptionEdit({ handleOptionView }) {
   return (
     <OptionEditBox>
       <Label>Avatar</Label>
-      <EditAvatar avatar={user.avatar} setAvatar={setAvatar} />
+      <EditAvatar avatar={user.photo_url} setAvatar={setAvatar} />
       <OptionEditFormContainer onSubmit={handleSubmit}>
         <Label> Username </Label>
         <Input {...username} />

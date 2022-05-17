@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const PrivateChannelsWrapper = styled.div`
@@ -9,7 +10,7 @@ export const PrivateChannelsWrapper = styled.div`
   border-radius: var(--b-radius);
 
   &:hover {
-    background: var(--background-primary-hover);
+    background: var(--background-secondary-hover);
   }
 `
 
@@ -31,4 +32,8 @@ export const PrivateChannelName = styled.p`
   margin: 0 10px;
   font-weight: 400;
   font-size: 1em;
+`
+
+export const LinkStyled = styled(Link)`
+  text-decoration: none;
 `
