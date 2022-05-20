@@ -1,15 +1,16 @@
 import { atom } from 'recoil'
 import Avatar from '../../assets/avatar.png'
 
-const user = JSON.parse(window.localStorage.getItem('user')) || false
-const image = window.localStorage.getItem('avatar') || Avatar
+const user = window.localStorage.getItem('user') || false
+const photo_url = window.localStorage.getItem('img') || Avatar
+const tag = window.localStorage.getItem('tag') || '#0001'
 
 export const UserAtom = atom({
   key: 'CurrentUser',
   default: {
-    username: user?.username,
-    photo_url: image,
-    tag: '#0001',
+    username: user || 'no-name',
+    photo_url,
+    tag,
     status: 'Connect'
   }
 })

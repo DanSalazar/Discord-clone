@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useRecoilState } from 'recoil'
 import User from '../../recoil/user'
 import {
@@ -15,8 +16,10 @@ function OptionEdit({ handleOptionView }) {
   const username = useField({ type: 'text', maxLength: '15' })
   const tag = useField({ type: 'text', maxLength: '4' })
   const [user, setUser] = useRecoilState(User)
+  const [latestImg, setLatestImg] = useState('')
  
   const setAvatar = (photo_url) => {
+    setLatestImg(user.photo_url)
     setUser({
       ...user,
       photo_url
@@ -30,21 +33,26 @@ function OptionEdit({ handleOptionView }) {
       handleOptionView()
       return
     }
-
-    if (username.value !== '' && tag.value === '') {
-      setUser({
-        ...user,
-        username: username.value,
-      })
-      handleOptionView()
-      return
-    }
  
-    const newTag = createTagOfUser(tag.value)
+    const newTag = tag.value ? createTagOfUser(tag.value) : user.tag
+
     setUser({
       ...user,
       username: username.value,
       tag: newTag
+    })
+
+    window.localStorage.setItem('user', username.value)
+    window.localStorage.setItem('tag', newTag)
+    window.localStorage.setItem('img', user.photo_url)
+
+    handleOptionView()
+  }
+
+  const handleCancel = () => {
+    setUser({
+      ...user,
+      photo_url: latestImg || user.photo_url
     })
     handleOptionView()
   }
@@ -66,7 +74,7 @@ function OptionEdit({ handleOptionView }) {
             color='transparent'
             size='small'
             margin='0 5px'
-            onClick={handleOptionView}>
+            onClick={handleCancel}>
             Cancel
           </Button>
         </OptionEditBoxButtonContainer>

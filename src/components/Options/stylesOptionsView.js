@@ -20,7 +20,7 @@ export const OptionEditFormContainer = styled.form`
 export const OptionEditBox = styled.div`
   width: 500px;
   overflow: hidden;
-  min-height: 420px;
+  min-height: 450px;
   padding: 10px 0;
   display: flex;
   flex-direction: column;

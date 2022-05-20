@@ -26,6 +26,7 @@ export const ButtonStyled = styled.button`
   border: 0;
   width: ${(props) => SIZE_BUTTON[props.size]};
   transition: var(--duration-transitions);
+  ${({ addStyles }) => addStyles && addStyles}
 
   &:hover {
     background: ${(props) => COLOR_HOVER[props.color]};
