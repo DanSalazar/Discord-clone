@@ -94,13 +94,14 @@ export const ChatHeaderInput = styled.input`
   }
 `
 
-export const ChatForm = styled.form``
+export const ChatForm = styled.form`
+  padding: 0 16px;
+`
 
 export const ChatInputBox = styled.div`
   background: var(--chat-input-background);
   display: flex;
   align-items: center;
-  width: 98%;
   height: auto;
   margin: auto;
   padding: 12px;
@@ -110,7 +111,7 @@ export const ChatInputBox = styled.div`
 export const ChatInputMessage = styled.input`
   background: none;
   color: var(--text-primary);
-  flex: 2 0 auto;
+  flex: 1 0 auto;
   outline: none;
   margin: 0 8px;
   font-size: 15px;
@@ -164,6 +165,7 @@ export const ChatInputControls = styled.button`
 export const ChatBoxWrapper = styled.div`
   height: 100%;
   overflow-y: auto;
+  padding: 0 16px;
 
   ::-webkit-scrollbar {
     width: 0.45em;
@@ -180,17 +182,10 @@ export const ChatBoxWrapper = styled.div`
   }
 `
 
-export const ChatBoxMessagesContent = styled.div``
-
 export const ChatMessageWrapper = styled.div`
   display: flex;
-  width: 98%;
-  padding: 3px 0;
-  margin: 20px auto;
-`
-
-export const ChannelMessageContent = styled.div`
-  margin: 0 10px;
+  margin: 20px 0;
+  gap: 8px;
 `
 
 export const ChatChannelNameAndTimeWrapper = styled.div``

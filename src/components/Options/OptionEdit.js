@@ -5,46 +5,40 @@ import {
   OptionEditFormContainer,
   OptionEditBoxButtonContainer,
   OptionEditBox
-} from './stylesOptionsView'
+} from './styles'
 import Button from '../Button/Button'
-import useField from '../../hooks/useField'
 import { Label, Input } from '../GlobalComponents/styles'
 import EditAvatar from './EditAvatar'
 import { createTagOfUser } from '../../utils'
 
 function OptionEdit({ handleOptionView }) {
-  const username = useField({ type: 'text', maxLength: '15' })
-  const tag = useField({ type: 'text', maxLength: '4' })
+  const [username, setUsername] = useState('')
+  const [tag, setTag] = useState('')
   const [user, setUser] = useRecoilState(User)
   const [latestImg, setLatestImg] = useState('')
- 
-  const setAvatar = (photo_url) => {
-    setLatestImg(user.photo_url)
+
+  const setAvatar = (avatar) => {
+    setLatestImg(user.avatar)
     setUser({
       ...user,
-      photo_url
+      avatar
     })
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if (username.value === '') {
-      handleOptionView()
-      return
-    }
- 
-    const newTag = tag.value ? createTagOfUser(tag.value) : user.tag
+    const newTag = tag ? createTagOfUser(parseInt(tag)) : user.tag
 
-    setUser({
+    const newUser = {
       ...user,
-      username: username.value,
+      username: username || user.username,
       tag: newTag
-    })
+    }
 
-    window.localStorage.setItem('user', username.value)
-    window.localStorage.setItem('tag', newTag)
-    window.localStorage.setItem('img', user.photo_url)
+    setUser(newUser)
+
+    window.localStorage.setItem('user', JSON.stringify(newUser))
 
     handleOptionView()
   }
@@ -52,7 +46,7 @@ function OptionEdit({ handleOptionView }) {
   const handleCancel = () => {
     setUser({
       ...user,
-      photo_url: latestImg || user.photo_url
+      photo_url: latestImg || user.avatar
     })
     handleOptionView()
   }
@@ -60,12 +54,20 @@ function OptionEdit({ handleOptionView }) {
   return (
     <OptionEditBox>
       <Label>Avatar</Label>
-      <EditAvatar avatar={user.photo_url} setAvatar={setAvatar} />
+      <EditAvatar avatar={user.avatar} setAvatar={setAvatar} />
       <OptionEditFormContainer onSubmit={handleSubmit}>
         <Label> Username </Label>
-        <Input {...username} />
+        <Input
+          type='text'
+          maxLength={15}
+          onChange={(e) => setUsername(e.target.value)}
+        />
         <Label> Tag </Label>
-        <Input {...tag} />
+        <Input
+          type='text'
+          maxLength={4}
+          onChange={(e) => setTag(e.target.value)}
+        />
         <OptionEditBoxButtonContainer>
           <Button color='primary' size='small'>
             Ready

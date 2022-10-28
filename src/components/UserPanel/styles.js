@@ -15,15 +15,13 @@ export const UserSidebar = styled.section`
 export const UserSidebarStatus = styled.div`
   display: flex;
   align-items: center;
-  height: 100%;
 `
 
 export const UserSidebarInfo = styled.div`
   display: inline-flex;
   overflow: hidden;
   flex-direction: column;
-  max-width: 80px;
-  align-items: flex-start;
+  margin-left: 8px;
 `
 
 export const UserSidebarUsername = styled.p`
@@ -37,7 +35,7 @@ export const UserSidebarId = styled.span`
   color: var(--text-primary-alt);
   margin: 0;
   font-weight: 500;
-  font-size: 0.7em;
+  font-size: 0.75em;
 `
 
 export const UserSidebarControlsWrapper = styled.div`
@@ -49,11 +47,10 @@ export const UserSidebarControlsWrapper = styled.div`
 
 export const UserSidebarControls = styled.button`
   color: var(--text-primary-alt);
+  border: 0;
   display: flex;
   align-items: center;
-  border: 0;
   background: 0;
-  padding: 6px;
   cursor: pointer;
   border-radius: var(--b-radius);
 

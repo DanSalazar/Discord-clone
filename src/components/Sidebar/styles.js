@@ -72,9 +72,10 @@ export const SidebarPrivateChannelsTitle = styled.p`
 `
 
 export const SidebarChannels = styled.div`
-  display: grid;
-  grid-template-columns: repeat(1, fr);
-  gap: 6px 0px;
+  display: flex;
+  align-items: stretch;
+  gap: 8px 0;
+  flex-direction: column;
 `
 
 export const SidebarOptionButtons = styled.button`

@@ -1,7 +1,7 @@
 import { useRecoilValue } from 'recoil'
-import User from '../../recoil/user' 
+import User from '../../recoil/user'
 import { Headset, Mic, Settings } from '@material-ui/icons'
-import AvatarWrapper from '../Avatar/AvatarWrapper'
+import Avatar from '../Avatar'
 import {
   UserSidebar,
   UserSidebarControls,
@@ -10,16 +10,19 @@ import {
   UserSidebarInfo,
   UserSidebarStatus,
   UserSidebarUsername
-} from './userPanelStyles'
+} from './styles'
+import { AVATAR_DIMENSIONS } from '../../constants'
 
 function UserPanel({ handleOptionView }) {
-  const { username, photo_url, tag } = useRecoilValue(User)
+  const { username, avatar, tag } = useRecoilValue(User)
 
   return (
     <UserSidebar>
       <UserSidebarStatus>
-        <AvatarWrapper
-          userAvatar={photo_url}
+        <Avatar
+          src={avatar}
+          width={AVATAR_DIMENSIONS['avatar']}
+          height={AVATAR_DIMENSIONS['avatar']}
         />
         <UserSidebarInfo>
           <UserSidebarUsername>

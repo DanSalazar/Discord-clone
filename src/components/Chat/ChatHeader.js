@@ -17,12 +17,12 @@ import {
   ChatHeaderButtonsWrapper,
   ChatHeaderChannelName,
   ChatHeaderToolbar
-} from './chatStyles'
+} from './styles'
 
 function ChatHeader({ channelName }) {
   return (
     <ChatHeaderWrapper>
-      <ChatHeaderChannelName>{ channelName || 'User' }</ChatHeaderChannelName>
+      <ChatHeaderChannelName>{channelName || 'User'}</ChatHeaderChannelName>
 
       <ChatHeaderToolbar>
         <ChatHeaderButtonsWrapper>

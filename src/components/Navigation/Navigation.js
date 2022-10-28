@@ -1,10 +1,5 @@
 import { Add, Explore, GetApp } from '@material-ui/icons'
-import React from 'react'
-import {
-  NavigationChannel,
-  NavigationTree,
-  NavigationWrapper
-} from './navigationStyles'
+import { NavigationChannel, NavigationTree, NavigationWrapper } from './styles'
 
 function Navigation() {
   return (

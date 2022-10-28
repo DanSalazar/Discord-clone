@@ -5,7 +5,7 @@
   --background-secondary-alt: #292b2f;
   --background-form: #36393f;
   --background-primary-hover: #36393f75;
-  --background-secondary-hover: #2f313675;
+  --background-secondary-hover: #4a4a4a80;
   --background-tertiary: #33353a;
   --background-tertiary-hover: #2e2f35;
   --background-modal: #000000b3;
@@ -14,15 +14,16 @@
   --text-primary-alt: #bbbbbb;
   --text-secondary: #72767d;
   --text-secondary-hover: #c5c9d4;
-  --text-channels: #8b8b8b;
+  --text-channels: #a1a1a1;
   --text-message: #d4d4d4;
-  --text-link: #00AFF4;
+  --text-link: #00aff4;
+  --channel-selected: #62626280;
   --chat-input-background: #40444b;
   --navigation-color-channel: #38aa55;
   --user-status-connected: #3eb65c;
   --user-status-absent: #e6c018;
   --user-status-busy: #d32721;
-  --error-color: #ED4C67;
+  --error-color: #ed4c67;
   --primary-color: #5865f2;
   --primary-color-hover: #404eed;
   --secondary-color: #575757;

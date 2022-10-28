@@ -9,7 +9,7 @@ import {
   ChatInputDragAndDrog,
   ChatForm,
   ChatInputMessage
-} from './chatStyles'
+} from './styles'
 import { v4 as uuid } from 'uuid'
 
 function ChatInput({ sendMessage }) {
@@ -25,7 +25,7 @@ function ChatInput({ sendMessage }) {
 
     if (message) {
       const messageToSend = {
-        author: { avatar: user.photo_url, username: user.username },
+        author: { avatar: user.avatar, username: user.username },
         content: message,
         id: uuid()
       }

@@ -1,6 +1,5 @@
-import React from 'react'
 import OptionEdit from './OptionEdit'
-import { OptionViewModal } from './stylesOptionsView'
+import { OptionViewModal } from './styles'
 
 function Options({ handleOptionView }) {
   return (

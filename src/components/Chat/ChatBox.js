@@ -1,11 +1,10 @@
 import React, { useRef, useEffect } from 'react'
 import ChatMessage from './ChatMessage'
-import { ChatBoxMessagesContent, ChatBoxWrapper } from './chatStyles'
+import { ChatBoxWrapper } from './styles'
 
 function ChatBox({ messages }) {
   const messagesWrapper = useRef()
 
-  // Messages component scroll to the last message
   useEffect(() => {
     messagesWrapper.current.scrollTop = messagesWrapper.current.scrollHeight
   }, [messages])
@@ -13,7 +12,7 @@ function ChatBox({ messages }) {
   return (
     <ChatBoxWrapper ref={messagesWrapper}>
       {messages && (
-        <ChatBoxMessagesContent>
+        <div>
           {messages.map((msg) => (
             <ChatMessage
               key={msg.id}
@@ -22,7 +21,7 @@ function ChatBox({ messages }) {
               avatar={msg.author.avatar}
             />
           ))}
-        </ChatBoxMessagesContent>
+        </div>
       )}
     </ChatBoxWrapper>
   )

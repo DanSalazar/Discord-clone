@@ -1,21 +1,24 @@
-import React from 'react'
 import {
   ChatMessageWrapper,
   ChatChannelTimestamp,
   ChatChannelName,
   ChatChannelMessage,
-  ChannelMessageContent,
   ChatChannelNameAndTimeWrapper
-} from './chatStyles'
-import Avatar from '../Avatar/Avatar'
+} from './styles'
+import Avatar from '../Avatar'
+import { AVATAR_DIMENSIONS } from '../../constants'
 
-const dateNow = () => new Date(Date.now()).toLocaleDateString() 
+const dateNow = () => new Date().toLocaleDateString()
 
 function ChatMessage({ channelName, message, avatar }) {
   return (
     <ChatMessageWrapper>
-      <Avatar width='40px' height='40px' avatarImage={avatar} />
-      <ChannelMessageContent>
+      <Avatar
+        width={AVATAR_DIMENSIONS['MESSAGE_AVATAR']}
+        height={AVATAR_DIMENSIONS['MESSAGE_AVATAR']}
+        src={avatar}
+      />
+      <div>
         <ChatChannelNameAndTimeWrapper>
           <ChatChannelName>{channelName}</ChatChannelName>
           <ChatChannelTimestamp dateTime={dateNow()}>
@@ -23,7 +26,7 @@ function ChatMessage({ channelName, message, avatar }) {
           </ChatChannelTimestamp>
         </ChatChannelNameAndTimeWrapper>
         <ChatChannelMessage>{message}</ChatChannelMessage>
-      </ChannelMessageContent>
+      </div>
     </ChatMessageWrapper>
   )
 }
